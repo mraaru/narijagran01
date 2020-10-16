@@ -224,6 +224,7 @@ a {
   .endmenumobile {
     display: flex;
     flex-direction: column;
+    margin: 30px 0;
   }
 }
 @media screen and (max-width: 750px) {
@@ -362,9 +363,200 @@ header ul li ul li {
 /*==menu end menu end menu end ========
 ======================================
 ====== sidebar sidebar sidebar======== */
+.outer-side0of-slider {
+  width: 100%;
+  overflow: hidden;
+  height: 100%;
+}
+#sidebar {
+  position: fixed;
+  width: 100%;
+  height: 110%;
+  max-width: 1500px;
+  background-color: rgb(252, 248, 241);
+  overflow-y: scroll;
+  overflow-x: hidden;
+  top: -110%;
+  transition: 0.5s;
+}
+#sidebar img {
+  width: 150px;
+}
+.menu-open-toggle-btn {
+  position: fixed;
+  width: 100%;
+  background-color: rgb(252, 255, 241);
+  box-shadow: 0 0 10px 0 black;
+  height: 100px;
+  max-width: 1500px;
+  margin-bottom: 2rem;
+}
+.logosidebar {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+nav ul {
+  background-color: rgb(252, 255, 241);
 
-
-
+  margin-top: 80px;
+  margin-bottom: 100px;
+}
+.toggle-btn {
+  position: relative;
+  flex-direction: column;
+  cursor: pointer;
+  display: flex;
+  left: 10px;
+  top: 10px;
+  width: 30px;
+  height: 25px;
+  justify-content: center;
+  align-items: center;
+  border-radius: 0.2rem;
+}
+.toggle-btn span {
+  width: 1.3rem;
+  height: 0.1rem;
+  background-color: black;
+  margin: 0.1rem 0;
+  display: block;
+  border-radius: 5px;
+}
+#sidebar.active .toggle-btn {
+  border-radius: 50%;
+}
+#sidebar.active .toggle-btn span:nth-child(1) {
+  transform: rotate(50deg);
+  position: absolute;
+  margin: 0;
+  width: 20px;
+}
+#sidebar.active .toggle-btn span:nth-child(2) {
+  transform: rotate(130deg);
+  position: absolute;
+  margin: 0;
+  width: 20px;
+}
+#sidebar.active .toggle-btn span:nth-child(3) {
+  position: absolute;
+  display: none;
+  margin: 0;
+}
+nav ul li {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  line-height: 55px;
+  transition: 0.5s;
+}
+nav ul li div {
+  color: rgb(65, 64, 64);
+  font-size: 14px;
+  padding-left: 10px;
+  font-weight: 500;
+  display: block;
+  width: 100%;
+  border-left: 3px solid transparent;
+  font-family: "Cinzel", serif;
+  transition: 0.2s;
+  cursor: pointer;
+}
+nav ul li a {
+  color: rgb(65, 64, 64);
+  font-size: 14px;
+  padding-left: 10px;
+  font-weight: 500;
+  display: block;
+  width: 100%;
+  border-left: 3px solid transparent;
+  font-family: "Cinzel", serif;
+  transition: 0.2s;
+}
+nav ul li a:hover {
+  color: #ffffff;
+  background-color: rgb(70, 69, 69);
+  border-left-color: #000000;
+}
+nav ul li div:hover {
+  color: #ffffff;
+  background-color: rgb(70, 69, 69);
+  border-left-color: #000000;
+}
+#sidesubbar {
+  display: none;
+  margin: 0 0;
+}
+#sidesubbar1 {
+  display: none;
+  margin: 0 0;
+}
+#sidesubbar2 {
+  display: none;
+  margin: 0 0;
+}
+#sidesubbar3 {
+  display: none;
+  margin: 0 0;
+}
+#sidesubbar8 {
+  display: none;
+  margin: 0 0;
+}
+#sidesubbar4 {
+  display: none;
+  margin: 0 0;
+}
+#sidesubbar5 {
+  display: none;
+  margin: 0 0;
+}
+#sidesubbar6 {
+  display: none;
+  margin: 0 0;
+}
+#sidesubbar7 {
+  display: none;
+  margin: 0 0;
+}
+nav ul ul li {
+  border-bottom: none;
+  line-height: 40px;
+}
+nav ul ul li a {
+  font-size: 10px;
+  color: black;
+  padding-left: 50px;
+}
+#sidesubbar.show {
+  display: block;
+}
+#sidesubbar1.show {
+  display: block;
+}
+#sidesubbar2.show {
+  display: block;
+}
+#sidesubbar3.show {
+  display: block;
+}
+#sidesubbar4.show {
+  display: block;
+}
+#sidesubbar5.show {
+  display: block;
+}
+#sidesubbar6.show {
+  display: block;
+}
+#sidesubbar7.show {
+  display: block;
+}
+#sidesubbar8.showo {
+  display: block;
+}
+#sidebar.active {
+  top: 0;
+}
 
 /*=======HOME HOME HOME HOME HOME ================*/
 .welcome {
@@ -730,7 +922,6 @@ h1 {
   font-size: 0.9em;
   margin-bottom: 0;
   margin-top: 170px;
-
 }
 .newsbox2 h1 {
   font-family: "Cinzel", serif;
